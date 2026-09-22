@@ -7,7 +7,7 @@
 HIRO hiro; // Declare an intance of HIRO.
 
 //set to true to have HIRO create its own wifi network, 
-//if false HIRO will instead try to connect to the network listed in 
+//if false HIRO will instead try to connect to the network listed in Home Wifi Settings Below
 const bool ap = false;
 
 //AP Settings
@@ -17,8 +17,8 @@ const char* ap_password = "password123";
 //nc 192.168.4.1 23
 
 //Home Wifi Settings:
-const char* home_ssid = "bluehouse";
-const char* home_password = "1234432112344321";
+const char* home_ssid = "YOUR_HOME_WIFI";
+const char* home_password = "WIFI_PASSWORD";
 WiFiServer wifiSerialServer(23);
 WiFiClient remoteClient;
 
