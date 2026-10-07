@@ -9,8 +9,7 @@ This is a Wifi control library for the H.I.R.O. Model TR-01-A
 ## Overview
 This library provides multiple example programs for controlling your HIRO robot wirelessly using a TCP server.
 
-## Keyboard Control
-WIP
+
 ## Wifi Control
 This is a modified version of the Serial Control example in the base HIRO library that lets you control your HIRO unit over a wifi connection rather than the Serial Monitor. 
 ### Setup & Configuration
@@ -50,3 +49,20 @@ putty.exe -raw <HIRO_IP_ADDRESS>:23
 ```
 Once you are connected, enter a command number from 1-10 followed by Enter to execute an action like you would using the Serial Control Example.
 
+## Keyboard Control - LINUX
+### Allegro
+The Keyboard Control Client requires the Allegro programming library, which can be found using the following link: https://liballeg.org/
+
+### Compiling
+To compile the Keyboard Control Client, enter theh Keyboard_Control folder and run the command below. This will use the make file in the directory to automatically compile the client with the Allegro Library linked. 
+```Bash
+make
+```
+
+### Running the Client
+To run the client, you must one of the following commands. If you run the one without the IP address argument the program will default to 192.168.1.168.
+>Make sure your robot is online and ready before running the client! Otherwise you will get a connection error!
+```Bash
+./HIRO_Keyboard_Client
+./HIRO_Keyboard_Client "INSERT IP ADDR HERE"
+```
